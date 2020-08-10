@@ -23,14 +23,28 @@ inquirer
         console.log(response.employee);
         switch (response.employee) {
             case "Engineer":
-                inquirer.prompt([
-                    {
-                        type: "list",
-                        message: "What type of employee is this?",
-                        name: "employee",
-                        choices: ["fart", "Manager", "Intern"],
-                    },
-                ]);
+                inquirer
+                    .prompt([
+                        {
+                            type: "input",
+                            message: "What is the Engineer's name?",
+                            name: "name",
+                        },
+                        {
+                            type: "input",
+                            message: "What is the Engineer's id?",
+                            name: "id",
+                        },
+                        {
+                            type: "input",
+                            message: "What is the Engineer's github?",
+                            name: "github",
+                        },
+                    ])
+                    .then(function (response) {
+                        console.log(response);
+                    });
+
                 break;
             case "Manager":
                 console.log("hello");
