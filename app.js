@@ -42,34 +42,63 @@ inquirer
                         },
                     ])
                     .then(function (response) {
-                        console.log(response);
+                        console.log(response.employee);
                     });
 
                 break;
             case "Manager":
-                console.log("hello");
                 inquirer
                     .prompt([
                         {
-                            type: "list",
-                            message: "What type of employee is this?",
-                            name: "car",
-                            choices: ["finger", "Manager", "Intern"],
+                            type: "input",
+                            message: "What is the Managerr's name?",
+                            name: "name",
+                        },
+                        {
+                            type: "input",
+                            message: "What is the Managers's id?",
+                            name: "id",
+                        },
+                        {
+                            type: "input",
+                            message: "What is the Manager's's office number?",
+                            name: "officeNumber",
                         },
                     ])
                     .then(function (response) {
                         console.log(response);
                     });
+
                 break;
             case "Intern":
-                inquirer.prompt([
-                    {
-                        type: "list",
-                        message: "What type of employee is this?",
-                        name: "employee",
-                        choices: ["dorce", "Manager", "Intern"],
-                    },
-                ]);
+                inquirer
+                    .prompt([
+                        {
+                            type: "input",
+                            message: "What is the Intern's name?",
+                            name: "name",
+                        },
+                        {
+                            type: "input",
+                            message: "What is the Intern's id?",
+                            name: "id",
+                        },
+                        {
+                            type: "input",
+                            message: "Where is the Intern attending school?",
+                            name: "school",
+                        },
+                    ])
+                    .then(function (response) {
+                        var internName = {
+                            employee: "intern",
+                        };
+                        console.log(internName);
+                        // response.push(internName);
+                        console.log(typeof response);
+                        console.log(response);
+                    });
+
                 break;
         }
 
