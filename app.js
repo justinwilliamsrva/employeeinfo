@@ -10,9 +10,65 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+inquirer
+    .prompt([
+        {
+            type: "list",
+            message: "What type of employee is this?",
+            name: "employee",
+            choices: ["Engineer", "Manager", "Intern"],
+        },
+    ])
+    .then(function (response) {
+        console.log(response.employee);
+        switch (response.employee) {
+            case "Engineer":
+                inquirer.prompt([
+                    {
+                        type: "list",
+                        message: "What type of employee is this?",
+                        name: "employee",
+                        choices: ["fart", "Manager", "Intern"],
+                    },
+                ]);
+                break;
+            case "Manager":
+                console.log("hello");
+                inquirer
+                    .prompt([
+                        {
+                            type: "list",
+                            message: "What type of employee is this?",
+                            name: "car",
+                            choices: ["finger", "Manager", "Intern"],
+                        },
+                    ])
+                    .then(function (response) {
+                        console.log(response);
+                    });
+                break;
+            case "Intern":
+                inquirer.prompt([
+                    {
+                        type: "list",
+                        message: "What type of employee is this?",
+                        name: "employee",
+                        choices: ["dorce", "Manager", "Intern"],
+                    },
+                ]);
+                break;
+        }
 
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
+        // let questions = `## Questions\nContact to me with any questions at www.github.com/${response.github} or email me at ${response.email}`;
+        // let readme =
+        //     title + desc + table + install + usage + license + contribute + tests + questions;
+        // fs.writeFile("exampleREADME.md", readme, function (err) {
+        //     if (err) {
+        //         return console.log(err);
+        //     }
+
+        //     console.log("success");
+    });
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
@@ -27,9 +83,3 @@ const render = require("./lib/htmlRenderer");
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
 // employee type.
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
