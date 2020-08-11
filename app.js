@@ -240,7 +240,7 @@ function createteam() {
             "Company Team Page" +
             "</h1>" +
             "</header>" +
-            `<div class="container"` +
+            '<div class="container">' +
             '<div class="row">' +
             '<div class="col-12">'
     );
@@ -299,7 +299,7 @@ function createteam() {
                 "</p>" +
                 "<hr>" +
                 "<p>" +
-                'GitHub username: <a target="_blank" "href = "https:www.github.com/' +
+                'GitHub username: <a target="_blank" href = "https:www.github.com/' +
                 engineerArr[i].github +
                 '">' +
                 engineerArr[i].github +
