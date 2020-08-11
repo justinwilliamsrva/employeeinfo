@@ -10,6 +10,8 @@ I want to generate a webpage that displays my team's basic info
 so that I have quick access to emails and GitHub profiles
 ```
 
+![image](https://user-images.githubusercontent.com/63308516/89931424-1d59cf80-dbda-11ea-8b28-27e9c5ae5210.png)
+
 ## Table of Contents
 
 -   [Installation](#installation)
@@ -44,4 +46,3 @@ Test are supplied in the test folder
 
 Contact to me with any questions at www.github.com/justinwilliamsrva or email me at justinwilliams2@me.com
 
-![image](https://user-images.githubusercontent.com/63308516/89931424-1d59cf80-dbda-11ea-8b28-27e9c5ae5210.png)
